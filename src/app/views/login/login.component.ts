@@ -18,12 +18,12 @@ export class LoginComponent implements OnInit {
 
   createNewUser(){
     this.authService.createNewUserWithEmail(this.email, this.password);
+    
   }
 
   signInWithEmail(){
     this.authService.signInWithEmail(this.email, this.password)
     .then((res) => {
-      console.log("UserDetails to: ", this.authService.loggedInUserDetails);
       this.router.navigate(['dashboard'])
     })
     .catch((err) => console.log(err));

@@ -8,7 +8,7 @@ import { Observable } from 'rxjs';
 
 @Injectable()
 export class AuthService {
-  private user: Observable<firebase.User>;
+  user: Observable<firebase.User>;
   private userDetails: firebase.User = null;
 
   constructor(private _firebaseAuth: AngularFireAuth, private router: Router) { 
@@ -18,7 +18,6 @@ export class AuthService {
         (user) => {
           if (user) {
             this.userDetails = user;
-            console.log("Dane usera: ", this.userDetails);
           }
           else {
             this.userDetails = null;
@@ -65,6 +64,10 @@ export class AuthService {
     } else {
       return true;
     }
+  }
+
+  get loggedUser(): firebase.User{
+    return this._firebaseAuth.auth.currentUser;
   }
 
 
