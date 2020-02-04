@@ -12,9 +12,26 @@
         <a class="btn btn-md btn-secondary" role="button" (click)="info()">Info o juzerze</a>
         <br/>
         <input [(ngModel)]="tst">
-        <a class="btn btn-md btn-secondary" role="button" (click)="update()">Zaktualizuj</a>
-        <p>Input: {{loggedUser.displayName}}</p>
-        <a class="btn btn-md btn-secondary" role="button" (click)="sendVerEmail()">Email weryfikacyjny</a>
+        <a class="btn btn-md btn-secondary" role="button" (click)="update()">Zaktualizuj nazwę</a>
+        <a class="btn btn-md btn-secondary" role="button" (click)="sendVerEmail()">Wyślij email weryfikacyjny</a>
+
+        <!-- <div class="container-lower-3">
+          <div class="visual-item-4">
+          </div>
+        </div> -->
+        <div class="container-lower">
+          <p class="visual-item-5">uid:</p>
+          <p class="visual-item-6">{{loggedUser.uid}}</p>
+          <p class="visual-item-5">displayName:</p>
+          <p class="visual-item-6">{{loggedUser.displayName}}</p>
+          <p class="visual-item-5">email:</p>
+          <p class="visual-item-6">{{loggedUser.email}}</p>
+          <p class="visual-item-5">emailVerified</p>
+          <p class="visual-item-6">{{loggedUser.emailVerified}}</p>
+          <p class="visual-item-5">phoneNumber</p>
+          <p class="visual-item-6">{{loggedUser.phoneNumber}}</p>
+        </div>
+
       </div>
     </div>
   </div>
