@@ -17,6 +17,7 @@ import * as firebase from 'firebase/app';
 import { AuthService } from './services/auth.service';
 import { AuthGuard } from './services/auth-guard.service';
 import { CommonModule } from '@angular/common';
+import { DatabaseService } from './services/database.service';
 
 @NgModule({
   declarations: [
@@ -33,7 +34,7 @@ import { CommonModule } from '@angular/common';
     AngularFireDatabaseModule,
     AngularFireAuthModule
   ],
-  providers: [AuthService, AuthGuard],
+  providers: [AuthService, AuthGuard, DatabaseService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

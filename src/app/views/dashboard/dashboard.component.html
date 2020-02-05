@@ -32,6 +32,17 @@
           <p class="visual-item-6">{{loggedUser.phoneNumber}}</p>
         </div>
 
+        <a class="btn btn-md btn-secondary" role="button" (click)="sendNewData()">Dodaj element do bazy</a>     
+        <div class="container-lower" *ngFor="let itm of usrDataFromDB">
+          <p class="visual-item-5">uid:</p>
+          <p class="visual-item-6">{{itm.uid }}</p>
+          <p class="visual-item-5">val1:</p>
+          <p class="visual-item-6">{{itm.val1}}</p>
+          <p class="visual-item-5">val2:</p>
+          <p class="visual-item-6">{{itm.val2}}</p>
+          <a class="btn" role="button" (click)="updateData(itm)">Zaktualizuj val2</a>
+        </div>
+
       </div>
     </div>
   </div>
